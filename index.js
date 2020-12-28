@@ -9,9 +9,6 @@ const{TOKEN, COMMAND_PREFIX} = process.env;
 const insults = require('./data/insults');
 
 client.once('ready',()=>{
-    //client.channels.cache
-    //.get('791951721038872609')
-    //.send('Luther Insult Bot is ready to insult you!');
     console.log('Luther Insult Bot is ready to insult you!');
 });
 
@@ -24,8 +21,6 @@ client.on('message',(message)=>{
     console.log(command);
 
     if(command.toLowerCase() === 'luther'){
-        //message.channel.send('How dare you! :angry:');
-        //message.reply('How dare you! :angry:');
         let randInsultIndex = Math.floor(Math.random() * insults.length);
         console.log(randInsultIndex);
         message.reply(insults[randInsultIndex]);
